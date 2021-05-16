@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>驾考题库</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="../head/head.css">
+    <script src="../js/lodash.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <!-- 导航部分 -->
+    <div class="head"></div>
+    <!-- 面包屑区 -->
+    <div class="container-fulid">
+        <div class="row  d-flex justify-content-center mr-0 ml-0">
+            <div class="col-10 ">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index/index.html">首页</a></li>
+                        <li class="breadcrumb-item"><a href="../select_object/chouseType.html">选择车型</a></li>
+                        <li class="breadcrumb-item active">开始考试</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- 提示部分 -->
+    <div class="container-fulid  line mt-5">
+        <div class="row d-flex justify-content-center  mr-0 ml-0">
+            <div class="col-10  tit">
+                <div class="divline border-top d-flex justify-content-center">
+                    <p class="d-block  bg-white">开始考试！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 考试区域 -->
+    <div class="container-fulid mt-2">
+        <div class="row d-flex justify-content-center  mr-0 ml-0">
+            <div class="col-9 d-flex test  ">
+                <div class="row w-100 h-100  justify-content-between my-test-content">
+                    <!-- 图片区 -->
+                    <div class="col-sm-3 pic border  box  align-self-center"></div>
+                    <!-- 题目区  -->
+                    <div class="col-sm-5 ques  box align-self-center border">
+                        <div class="icon collector" title="收藏">&#xe629;</div>
+                        <div class="icon record" title="错题本"><a href="javascript:;">&#xe60d;</a></div>
+
+                        <p class="ques-num">第几题</p>
+                        <p class="ques-text">哪个是正确的</p>
+                        <div class="my-btn-vertical">
+                            <label for="item1" class="d-block" data-id="1" data-isClick="true">
+                                <input type="radio" name="options" id="item1">
+                                <i>A</i>
+                                <span class="option1">选项A-D</span>
+
+                                <div class="bg-info d-inline-block px-1"></div>
+
+                            </label>
+
+                            <label for="item2" class="d-block" data-id="2" data-isClick="true">
+                                <input type="radio" name="options" id="item2">
+                                <i>A</i>
+                                <span class="option1">选项A-D</span>
+                                <div class="bg-info d-inline-block px-1"></div>
+                            </label>
+                            <label for="item3" class="d-block" data-id="3" data-isClick="true">
+                                <input type="radio" name="options" id="item3">
+                                <i>A</i>
+                                <span class="option1">选项A-D</span>
+                                <div class="bg-info d-inline-block px-1"></div>
+                            </label>
+                            <label for="item4" class="d-block" data-id="4" data-isClick="true">
+                                <input type="radio" name="options" id="item4">
+                                <i>A</i>
+                                <span class="option1">选项A-D</span>
+                                <div class="bg-info d-inline-block px-1"></div>
+                            </label>
+                        </div>
+                        <button class="btn btn-primary next disable">下一题</button>
+                        <button class="btn btn-danger text-white right ">正确答案是：<span
+                                class="badge badge-light">A</span></button>
+                    </div>
+                    <!-- 解释区 -->
+                    <div class="col-sm-3 explain box  align-self-center border">
+                        <span class="badge  badge-primary py-2">解释：</span>
+                        <p class="d-inline-block">本题无解释。本题无解释。本题无解释。本题无解释。本题无解释。本题无解释。本题无解释。</p>
+                    </div>
+                    <!-- hhh -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹出模态框 -->
+    <div class="modal fade bd-example-modal-xl" id="modal">
+        <!-- 这里添加.bd-example-modal-xl -->
+        <div class="modal-dialog modal-xl">
+            <!-- 这里添加.modal-xl -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">解决方案</h5>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   <h6 class="badge py-2 mx-2 badge-primary mt-4">第一步</h6>
+                   <p >1.当您出现图片加载不出来的情况，如下图↓</p>
+                   <img class="d-block" src="./solve/1.png" alt="">
+                   <h6 class="badge py-2 mx-2 badge-primary mt-4">第二步</h6>
+                   <p >2.按下<span class="badge badge-info">F12</span>或者<span class="badge badge-info">右键</span>检查，如下图↓</p>
+                   <img class="d-block" src="./solve/2.png" alt="">
+                   <h6 class="badge py-2 mx-2 badge-primary mt-4">第三步</h6>
+                   <p >3.点击<span class="badge badge-info">控制台</span>报错的地方，鼠标移入<span class="badge badge-info">链接</span>右键，如下图↓</p>
+                   <img class="d-block" src="./solve/3.png" alt="">
+                   <h6 class="badge py-2 mx-2 badge-primary mt-4">第四步</h6>
+                   <p >4.在<span class="badge badge-info">新标签页打开(Open in new tab)</span>，如下图↓</p>
+                   <img class="d-block" src="./solve/4.png" alt="">
+                   <h6 class="badge py-2 mx-2 badge-primary mt-4">第四步</h6>
+                   <p >5.点击<span class="badge badge-info">高级</span>，如下图↓</p>
+                   <img class="d-block" src="./solve/5.png" alt="">
+                   <h6 class="badge py-2 mx-2 badge-primary mt-4">第四步</h6>
+                   <p >6.点击<span class="badge badge-info">继续访问</span>，如下图↓</p>
+                   <img class="d-block" src="./solve/6.png" alt="">
+                   <h6 class="badge py-2 mx-2 badge-primary mt-4">第四步</h6>
+                   <p >7.返回题目页面<span class="badge badge-info">刷新</span>即可，如下图↓</p>
+                   <img class="d-block" src="./solve/7.png" alt="">
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-info solveBtn" data-toggle="modal" data-target="#modal">图片区未显示点击这里</button>
+    <script>
+        $('.head').load("../head/head.html");
+        // $(this).parent
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./test.js"></script>
+</body>
+
+</html>
